@@ -14,7 +14,7 @@ router.get("/", (req,res)=>{
 // GET A SINGLE TRANSACTION
 router.get("/:id", (req, res) => {
     const { id } = req.params;
-    const transaction = transactionData.find(ele => ele.id === id || +id)
+    const transaction = transactionData.find(ele => ele.id === id)
     if (transaction) {
       res.status(200).send(transaction)
     } else {
